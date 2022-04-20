@@ -34,8 +34,8 @@ let iShop = React.createClass({
             );
         })
 
-      let iShopHeadArr = ["URL фотографии", "Название", "Цена", "Количество"].map((e) => {
-          return React.DOM.div({ key: e, className: 'iShopProductsHead' }, e);
+      let iShopHeadArr = ["URL фотографии", "Название", "Цена", "Количество"].map((e, i) => {
+          return React.DOM.div({ key: i, className: 'iShopProductsHead' }, e);
         })
 
       return React.DOM.div({ className: 'iShopGrid' },
