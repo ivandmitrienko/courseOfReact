@@ -22,19 +22,28 @@ let iShop = React.createClass({
         )
     }, 
     
-    render: function() {
+    render: function () {
 
-        let answersCode=this.props.answers.map( v =>
-            React.DOM.div({key:v.code,className:'Answer'},
-              React.DOM.span({className:'Count'},v.count),
-              React.DOM.span({className:'Text'},v.text),
-            )
-          );
-        return React.DOM.div( {className:'VotesBlock'}, 
-          React.DOM.div( {className:'Question'}, this.props.question ),
-          React.DOM.div( {className:'Answers'}, answersCode ),
+      let products = this.props.iShopArr.map((e) => {
+          return React.DOM.div({ key: e.id, className: 'iShopProducts' },
+              React.DOM.div({ className: 'productsImg' },
+                  React.DOM.img({ src: e.url, alt: "" },)),
+              React.DOM.div({}, e.name),
+              React.DOM.div({}, `${e.price} руб`),
+              React.DOM.div({}, `${e.count} шт`),
+            );
+        })
+
+      let iShopHeadArr = ["URL фотографии", "Название", "Цена", "Количество"].map((e) => {
+          return React.DOM.div({ key: e, className: 'iShopProductsHeads' }, e);
+        })
+
+      return React.DOM.div({ className: 'iShopGrid' },
+          React.DOM.div({ className: 'iShopName' }, this.props.iShopName),
+          React.DOM.div({ className: 'iShopProductsHead' }, iShopHeadArr),
+          React.DOM.div({ className: 'iShopName' }, products),
         );
-      },
+    },
     
 
 
