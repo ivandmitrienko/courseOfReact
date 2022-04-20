@@ -35,13 +35,13 @@ let iShop = React.createClass({
         })
 
       let iShopHeadArr = ["URL фотографии", "Название", "Цена", "Количество"].map((e) => {
-          return React.DOM.div({ key: e, className: 'iShopProductsHeads' }, e);
+          return React.DOM.div({ key: e, className: 'iShopProductsHead' }, e);
         })
 
       return React.DOM.div({ className: 'iShopGrid' },
           React.DOM.div({ className: 'iShopName' }, this.props.iShopName),
-          React.DOM.div({ className: 'iShopProductsHead' }, iShopHeadArr),
-          React.DOM.div({ className: 'iShopName' }, products),
+          React.DOM.div({ className: 'iShopProductsHeads' }, iShopHeadArr),
+          React.DOM.div({ className: 'iShopProductsBody' }, products),
         );
     },
     

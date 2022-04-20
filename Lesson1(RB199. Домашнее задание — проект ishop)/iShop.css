@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+   
+    
+}
+
+.iShopGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 100px 1fr;
+    /* grid-template: repeat(3, 200px)/ repeat(1, 1fr); */
+}
+
+.iShopName {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    padding: 30px;
+    text-align: center;
+    color: green;
+    text-decoration: underline;
+    text-decoration-color: hsl(70, 100%, 40%);
+
+}
+
+.iShopProducts {
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    
+}
+
+.iShopProducts div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    height: 300px;
+    width: 25%;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+.iShopProducts img {
+    width: 100%;
+    height: 100%;
+}
+
+.iShopProducts div:hover {
+    background: linear-gradient(#58b6b9, #edf1cf);
+    cursor: pointer;
+}
+
+.iShopProductsHeads{
+    display: flex;
+    justify-content: space-around;
+    font-size: 3em;
+    background: linear-gradient(45deg, #e6e9f0, #eef1f5);
+    
+}
+
+.iShopProductsHeads .iShopProductsHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    border: 2px solid black;
+    background-image: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;  
+}
+
