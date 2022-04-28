@@ -38,7 +38,7 @@ let iShop = React.createClass({
     removeItem: function(id, title){
         if (confirm(`Вы хотите удалить ${title.toUpperCase()}?`)) {
             let filtered = this.state.products.filter(product => product.id !== id);
-            this.setState({books: filtered}, null);
+            this.setState({products: filtered}, null);
         }
     },
 
