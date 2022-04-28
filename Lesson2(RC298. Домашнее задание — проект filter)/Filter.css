@@ -1,0 +1,19 @@
+.Filter {
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Filter .Menu {
+    width: 270px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Filter .Words {
+    margin-top: 15px;
+    width: 270px;
+}
