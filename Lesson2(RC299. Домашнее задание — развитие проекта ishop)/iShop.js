@@ -59,7 +59,7 @@ let iShop = React.createClass({
 
         return React.DOM.div({className: 'shop'},
             React.DOM.table({className: 'shop_table'},
-                React.DOM.caption({className: 'shop_name'}, this.props.shopName),
+                React.DOM.caption({className: 'shop_name', style:{color: "green", fontSize:"30px"}}, this.props.iShopName),
                 React.DOM.tbody(null,
                     React.DOM.tr({className: 'shop_column_name'},
                         React.DOM.th(null, 'URL фотографии'),
