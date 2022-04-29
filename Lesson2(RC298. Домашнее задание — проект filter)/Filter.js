@@ -37,7 +37,7 @@ let Filter = React.createClass({
             wordsArray;
 
         wordsArray = (isSorted) ?
-            wordsArray.sort((next, prev) => next.word > prev.word ? 1 : next.word < prev.word ? -1 : 0) :
+            wordsArray.sort((next, prev) => next.word > prev.word ? 1 : next.word < prev.word ? -1 : 0 ) :
             wordsArray;
 
         this.setState({words: wordsArray}, null);
