@@ -4,7 +4,7 @@ require('./Product.css');
 
 let Product = React.createClass({
 
-    displayName: 'iShop',
+    displayName: 'Product',
 
     propTypes: {
         id: React.PropTypes.number.isRequired,
