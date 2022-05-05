@@ -2,7 +2,7 @@
   "name": "ishop",
   "version": "1.0.0",
   "description": "iShop3",
-  "main": "iShop.js",
+  "main": "index.html",
   "scripts": {
     "start":"npm run lite",
     "test": "karma.js hhhh",
