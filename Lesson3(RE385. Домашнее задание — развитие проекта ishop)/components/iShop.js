@@ -1,3 +1,9 @@
+let React = require('react');
+
+require('./iShop.css');
+
+let Product = require('./Product');
+
 let iShop = React.createClass({
 
     displayName: 'iShop',
@@ -73,4 +79,7 @@ let iShop = React.createClass({
             )
         )
     },
-});    
+}); 
+
+
+module.exports = iShop;
