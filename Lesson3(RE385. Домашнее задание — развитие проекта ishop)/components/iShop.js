@@ -72,9 +72,6 @@ class iShop extends React.Component{
                     {products}
                 </table>
             </div>
-            
-                
-        
         );
     }
 }; 
