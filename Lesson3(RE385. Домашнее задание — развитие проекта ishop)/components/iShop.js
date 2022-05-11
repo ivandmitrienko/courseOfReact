@@ -56,22 +56,34 @@ class iShop extends React.Component{
             />
         );
 
-        return React.DOM.div({className: 'shop'},
-            React.DOM.table({className: 'shop_table'},
-                React.DOM.caption({className: 'shop_name', style:{color: "green", fontSize:"30px"}}, this.props.iShopName),
-                React.DOM.tbody(null,
-                    React.DOM.tr({className: 'shop_column_name'},
-                        React.DOM.th(null, 'URL фотографии'),
-                        React.DOM.th(null, 'Название'),
-                        React.DOM.th(null, 'Цена'),
-                        React.DOM.th(null, 'Количество'),
-                        React.DOM.th(null, 'Контроль'),
-                    ),
-                    products
-                )
-            )
-        )
-    },
+        return (
+            <div className = 'shop'>
+                <table className = 'shop_table'>
+                    <caption className ='shop_name' style={{color:"green",fontSize= "30px"}}>{this.props.iShopName})</caption>
+                        <tbody>
+                           <tr className = 'shop_column_name'>
+                           React.DOM.th(null, 'URL фотографии'),
+                                   React.DOM.th(null, 'Название'),
+                                   React.DOM.th(null, 'Цена'),
+                                   React.DOM.th(null, 'Количество'),
+                                   React.DOM.th(null, 'Контроль'),
+                               ),
+           
+                           </tr>,
+                               
+                           
+                        </tbody>,
+                            
+                            {products}
+                        )
+                    )
+                </table>
+            </div>
+            
+                
+        
+        );
+    }
 }; 
 
 
