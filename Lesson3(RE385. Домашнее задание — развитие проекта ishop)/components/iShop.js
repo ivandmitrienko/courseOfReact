@@ -1,66 +1,59 @@
-let React = require('react');
+import React from 'react';
 
-require('./iShop.css');
+import PropTypes from 'prop-types';
 
-let Product = require('./Product');
+import './iShop.css';
 
-let iShop = React.createClass({
+import Product from './Product';
 
-    displayName: 'iShop',
+class iShop extends React.Component{
 
-    getDefaultProps: function () {
-        return {
-            iShopName: "Проверьте название магазина",
-            iShopArr: [{ id: 0, title: 'нет данных', price: 'нет данных', url: 'нет данных', count: 'нет данных' }]
-        }
-    },
-
-    propTypes: {
-        iShopName: React.PropTypes.string.isRequired,
-        iShopArr:React.PropTypes.arrayOf(
-            React.PropTypes.shape({
-              id: React.PropTypes.number.isRequired,
-              count: React.PropTypes.number.isRequired,
-              price: React.PropTypes.number.isRequired,
-              title: React.PropTypes.string.isRequired,
-              url: React.PropTypes.string.isRequired,
+    static propTypes = {
+        iShopName: PropTypes.string.isRequired,
+        iShopArr: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.number.isRequired,
+              count: PropTypes.number.isRequired,
+              price: PropTypes.number.isRequired,
+              title: PropTypes.string.isRequired,
+              url: PropTypes.string.isRequired,
             })
         )
-    }, 
+    }; 
 
-    getInitialState: function () {
-        return {
-            products: this.props.iShopArr,
-            isClicked: 0,
-        }
-    },
+    state = {
+        
+        products: this.props.iShopArr,
+        isClicked: 0,
+        
+    };
 
-    clickedItem: function(id){
+    clickedItem = (id) => {
 
         this.setState({isClicked:id});
 
-    },
+    };
 
-    removeItem: function(id, title){
+    removeItem = (id, title) => {
         if (confirm(`Вы хотите удалить ${title.toUpperCase()}?`)) {
             let filtered = this.state.products.filter(product => product.id !== id);
             this.setState({products: filtered}, null);
         }
-    },
+    };
 
     render() {
         let products = this.state.products.map(product =>
-            React.createElement(Product, {
-                key: product.id,
-                id: product.id,
-                title: product.title,
-                url: product.url,
-                price: product.price,
-                count: product.count,
-                remove: this.removeItem,
-                clicked: this.clickedItem,
-                isClicked: product.id === this.state.isClicked,
-            })
+            <Product
+                key = {product.id}
+                id = {product.id}
+                title = {product.title}
+                url = {product.url}
+                price = {product.price}
+                count = {product.count}
+                remove = {this.removeItem}
+                clicked = {this.clickedItem}
+                isClicked = {product.id === this.state.isClicked}
+            />
         );
 
         return React.DOM.div({className: 'shop'},
@@ -79,7 +72,7 @@ let iShop = React.createClass({
             )
         )
     },
-}); 
+}; 
 
 
-module.exports = iShop;
+export default iShop;
