@@ -60,23 +60,16 @@ class iShop extends React.Component{
             <div className = 'shop'>
                 <table className = 'shop_table'>
                     <caption className ='shop_name' style={{color:"green",fontSize= "30px"}}>{this.props.iShopName})</caption>
-                        <tbody>
-                           <tr className = 'shop_column_name'>
-                           React.DOM.th(null, 'URL фотографии'),
-                                   React.DOM.th(null, 'Название'),
-                                   React.DOM.th(null, 'Цена'),
-                                   React.DOM.th(null, 'Количество'),
-                                   React.DOM.th(null, 'Контроль'),
-                               ),
-           
-                           </tr>,
-                               
-                           
-                        </tbody>,
-                            
-                            {products}
-                        )
-                    )
+                    <tbody>
+                       <tr className = 'shop_column_name'>
+                            <th>URL фотографии</th>
+                            <th>Название</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Контроль</th>
+                        </tr> 
+                    </tbody>     
+                    {products}
                 </table>
             </div>
             
