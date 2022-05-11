@@ -1,59 +1,58 @@
-let React = require('react');
+import React from 'react';
 
-require('./Product.css');
+import PropTypes from 'prop-types';
 
-let Product = React.createClass({
+import './Products.css';
 
-    displayName: 'Product',
+class Product extends React.Component{
 
-    propTypes: {
-        id: React.PropTypes.number.isRequired,
-        count: React.PropTypes.number.isRequired,
-        price: React.PropTypes.number.isRequired,
-        title: React.PropTypes.string.isRequired,
-        url: React.PropTypes.string.isRequired,
-        remove: React.PropTypes.func,
-        clicked: React.PropTypes.func,
-        isClicked: React.PropTypes.bool,
-    },
+    static propTypes = {
+        id: PropTypes.number.isRequired,
+        count: PropTypes.number.isRequired,
+        price: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        remove: PropTypes.func,
+        clicked: PropTypes.func,
+        isClicked: PropTypes.bool,
+    };
 
 
-    clicked: function(){
+    clicked = () => {
 
         this.props.clicked(this.props.id);
         
-    },
+    };
 
-    remove: function(){
+    remove = () => {
 
         this.props.remove(this.props.id, this.props.title);
 
-    },
+    };
     
     
     render() {
 
         let bgProduct = this.props.isClicked ? {backgroundColor: 'orange'} : null;
 
-        return React.DOM.tr({
-             className:" product_row",
-             style: bgProduct,
-             onClick: this.clicked,
-            },
-            React.DOM.td(null, React.DOM.a({href: this.props.url},
-                React.DOM.span({className: 'product_image', style: {backgroundImage: `url("${this.props.url}")`}}))
-            ),
-            React.DOM.td(null, this.props.title),
-            React.DOM.td(null, this.props.price),
-            React.DOM.td(null, this.props.count),
-            React.DOM.td(null,  React.DOM.button(
-                {className: 'product_remove', type: 'button', value: this.props.id, onClick: this.remove}, 'Remove'
-            )),
-
+        return (
+            <tr className =" product_row" style = {bgProduct} onClick = {this.clicked}>
+                <td>
+                    <a href={this.props.url}>
+                        <span className = 'product_image' style = {{backgroundImage: `url("${this.props.url}")`}}></span>
+                    </a>
+                </td>     
+                <td>{this.props.title}</td>
+                <td>{this.props.price}</td>
+                <td>{this.props.count}</td>
+                <td>
+                    <button className = 'product_remove' type = 'button'  value = {this.props.id}  onClick = {this.remove}>Remove</button>
+                </td>
+            </tr>
         )
     }
 
-});
+};
 
 
-module.exports = Product;
+export default Product;

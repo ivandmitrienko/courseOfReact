@@ -4,14 +4,14 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 
-import iShop from './components/iShop';
+import IShop from './components/iShop';
 
 let iShopName='Green';
 
 let iShopArr=require('./iShopArr.json');
 
 ReactDOM.render(
-  <iShop
+  <IShop
     iShopName={iShopName}
     iShopArr={iShopArr}
   />

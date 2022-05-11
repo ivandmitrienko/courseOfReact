@@ -6,7 +6,7 @@ import './iShop.css';
 
 import Product from './Product';
 
-class iShop extends React.Component{
+class IShop extends React.Component{
 
     static propTypes = {
         iShopName: PropTypes.string.isRequired,
@@ -77,4 +77,4 @@ class iShop extends React.Component{
 }; 
 
 
-export default iShop;
+export default IShop;
