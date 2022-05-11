@@ -2,12 +2,12 @@ let iShop = React.createClass({
 
     displayName: 'iShop',
 
-    // getDefaultProps: function () {
-    //     return {
-    //         iShopName: "Проверьте название магазина",
-    //         iShopArr: [{ id: 0, title: 'нет данных', price: 'нет данных', url: 'нет данных', count: 'нет данных' }]
-    //     }
-    // },
+    getDefaultProps: function () {
+        return {
+            iShopName: "Проверьте название магазина",
+            iShopArr: [{ id: 0, title: 'нет данных', price: 'нет данных', url: 'нет данных', count: 'нет данных' }]
+        }
+    },
 
     propTypes: {
         iShopName: React.PropTypes.string.isRequired,
