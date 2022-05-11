@@ -9,8 +9,8 @@ import Product from './Product';
 class IShop extends React.Component{
 
     static propTypes = {
-        iShopName: PropTypes.string.isRequired,
-        iShopArr: PropTypes.arrayOf(
+        ShopName: PropTypes.string.isRequired,
+        ShopArr: PropTypes.arrayOf(
             PropTypes.shape({
               id: PropTypes.number.isRequired,
               count: PropTypes.number.isRequired,
@@ -23,7 +23,7 @@ class IShop extends React.Component{
 
     state = {
         
-        products: this.props.iShopArr,
+        products: this.props.ShopArr,
         isClicked: 0,
         
     };
@@ -59,7 +59,7 @@ class IShop extends React.Component{
         return (
             <div className = 'shop'>
                 <table className = 'shop_table'>
-                    <caption className ='shop_name' style={{color:"green",fontSize= "30px"}}>{this.props.iShopName})</caption>
+                    <caption className ='shop_name' style={{color:"green",fontSize= "30px"}}>{this.props.ShopName})</caption>
                     <tbody>
                        <tr className = 'shop_column_name'>
                             <th>URL фотографии</th>
