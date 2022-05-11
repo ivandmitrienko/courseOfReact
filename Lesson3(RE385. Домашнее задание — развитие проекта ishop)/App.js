@@ -1,12 +1,14 @@
 "use strict"
 
-let React = require('react');
+import React from 'react';
 
-let ReactDOM = require('react-dom');
+import ReactDOM from 'react-dom';
 
-let iShop = require('./components/iShop');
+import iShop from './components/iShop';
 
 let iShopName='Green';
+
+// let answersArr=require('./answers.json');
 
 let iShopArr=[ 
   {id:0, title:'Пицца "ЦЫПЛЕНОК ТЕРИЯКИ"', price: 17.99, url:"https://www.green-market.by/files//catalogproducts/127-Picca_Cyplenok_teriyaki.jpg",count:111}, 
