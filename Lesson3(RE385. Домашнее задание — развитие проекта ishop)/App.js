@@ -12,8 +12,8 @@ let iShopArr=require('./iShopArr.json');
 
 ReactDOM.render(
   <IShop
-    ShopName={iShopName}
-    ShopArr={iShopArr}
+    ShopName = {iShopName}
+    ShopArr = {iShopArr}
   />
   , document.getElementById('container') 
 );
