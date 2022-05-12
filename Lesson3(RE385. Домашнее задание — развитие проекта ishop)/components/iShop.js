@@ -59,7 +59,7 @@ class IShop extends React.Component{
         return (
             <div className = 'shop'>
                 <table className = 'shop_table'>
-                    <caption className ='shop_name' style={{color:"green",fontSize= "30px"}}>{this.props.ShopName})</caption>
+                    <caption className ='shop_name' style={{color:"green",fontSize: "30px"}}>{this.props.ShopName})</caption>
                     <tbody>
                        <tr className = 'shop_column_name'>
                             <th>URL фотографии</th>
