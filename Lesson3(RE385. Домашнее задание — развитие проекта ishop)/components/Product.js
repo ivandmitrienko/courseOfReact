@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import './Products.css';
+import './Product.css';
 
 class Product extends React.Component{
 
