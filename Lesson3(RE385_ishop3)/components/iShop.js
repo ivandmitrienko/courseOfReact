@@ -67,9 +67,9 @@ class IShop extends React.Component{
                             <th>Цена</th>
                             <th>Количество</th>
                             <th>Контроль</th>
-                        </tr> 
+                        </tr>
+                        {products} 
                     </tbody>     
-                    {products}
                 </table>
             </div>
         );
