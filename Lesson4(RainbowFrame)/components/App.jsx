@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import RainbowFrame from './RainbowFrame';
+import RainbowFrame from './RainbowFrame.jsx';
 
 function App() {
   const colors = ['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
