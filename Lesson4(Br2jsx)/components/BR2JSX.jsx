@@ -6,7 +6,7 @@ export default (props) =>{
 
     const withOutBr = props.text.split(regex);
 
-    const withBr = withOutBr.map((e) => e +"<br>")
+    const withBr = withOutBr.map((e) => e +"<br>");
 
     return <div>{withBr}</div>;
 }
