@@ -2,12 +2,16 @@ import React from 'react';
 
 export default (props) =>{
 
-    const regex = /<br\s?\/?>/;
+    const withOutBr = props.text.split(/<br\s?\/?>/);
 
-    const withOutBr = props.text.split(regex);
+    return (<div className='br2jsx' style = {{width: "200px", backgroundColor:"tomato", textAlign:"center"}}>
 
-    const withBr = withOutBr.map((e) => e +"<br>");
+       {withOutBr.map((e,i) => <React.Fragment key={i}>
+           {e}
+           {i<withOutBr.length-1 && <br/>}
+           </React.Fragment>)}
 
-    return <div>{withBr}</div>;
+         
+        </div>);
 }
 
