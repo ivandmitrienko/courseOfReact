@@ -4,6 +4,8 @@ import React from 'react';
 
 import DoubleButton from './DoubleButton.jsx';
 
+import withRainbowFrame from './RainbowFrame.jsx';
+
 function App() {
   
   const colors=['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
