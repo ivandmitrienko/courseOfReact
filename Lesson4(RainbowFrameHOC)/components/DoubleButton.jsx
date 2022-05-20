@@ -8,16 +8,6 @@ export default (props) =>{
             {props.children}
             <button onClick={()=>props.cbPressed(props.caption2)}>{props.caption2}</button>
         </div>
+        
     )
-
-   
-
-
-    // const frames = props.colors.reduce((acc,cur)=>
-    // <div style={{border:`2px solid ${cur}`, padding:'10px', textAlign:'center'}}>
-    //     {acc}
-    // </div>,
-    // props.children);
-
-    // return <div>{frames}</div>;
 }
