@@ -2,7 +2,7 @@
   "name": "votesblock",
   "version": "1.0.0",
   "description": "блок голосования",
-  "main": "App.js",
+  "main": "index.js",
   "scripts": {
     "build": "npx webpack",
     "livebuild": "npx webpack-dev-server --progress --colors"
