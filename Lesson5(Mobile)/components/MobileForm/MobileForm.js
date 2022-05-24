@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { mobileEvents } from '../../events';
 
 
-import('./MobileForm.css');
+import './MobileForm.css';
 
 
 

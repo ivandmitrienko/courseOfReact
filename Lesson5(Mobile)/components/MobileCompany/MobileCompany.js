@@ -6,7 +6,7 @@ import MobileClient from '../MobileClient/MobileClient';
 import MobileForm from '../MobileForm/MobileForm';
 import MobileFilter from '../MobileFilter/MobileFilter';
 
-import('./MobileCompany.css');
+import './MobileCompany.css';
 
 const defaultClient = {
     id: 1,
