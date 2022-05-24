@@ -46,7 +46,9 @@ class Product extends React.Component{
                 <td>{this.props.price}</td>
                 <td>{this.props.count}</td>
                 <td>
-                    <button className = 'product_remove' type = 'button'  value = {this.props.id}  onClick = {this.remove}>Remove</button>
+                    <button className = 'product_edit' type = 'button'  value = {this.props.id}  onClick = {this.edit}>Edit</button>
+                    <button className = 'product_remove' type = 'button'  value = {this.props.id}  onClick = {this.remove}>Delete</button>
+                    
                 </td>
             </tr>
         )
