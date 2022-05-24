@@ -4,8 +4,8 @@
   "description": "мобильная компания",
   "main": "index.js",
   "scripts": {
-    "build": ".\\node_modules\\.bin\\webpack",
-    "livebuild": ".\\node_modules\\.bin\\webpack-dev-server --progress --colors"
+    "build": "npx webpack",
+    "livebuild": "npx webpack-dev-server --progress --colors"
   },
   "author": "ivan",
   "license": "ISC",

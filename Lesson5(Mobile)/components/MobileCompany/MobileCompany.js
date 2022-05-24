@@ -16,7 +16,7 @@ const defaultClient = {
       otch: '',
     },
     balance: 0,
-  }
+}
 
 
 class MobileCompany extends React.PureComponent {
@@ -60,29 +60,30 @@ class MobileCompany extends React.PureComponent {
     }
 
     componentDidMount = () => {
-        mobileEvents.addListener('EDelete', this.delete);
-        mobileEvents.addListener('EEdit', this.edit);
-        mobileEvents.addListener('ECreate', this.create);
-        mobileEvents.addListener('ESaveClient', this.save);
-        mobileEvents.addListener('ECancel', this.cancel);
-    
-        mobileEvents.addListener('EFilterAll', this.filterAll);
-        mobileEvents.addListener('EFilterActive', this.filterActive);
-        mobileEvents.addListener('EFilterBlocked', this.filterBlocked);
-    
+      mobileEvents.addListener('EDelete', this.delete);
+      mobileEvents.addListener('EEdit', this.edit);
+      mobileEvents.addListener('ECreate', this.create);
+      mobileEvents.addListener('ESaveClient', this.save);
+      mobileEvents.addListener('ECancel', this.cancel);
+  
+      mobileEvents.addListener('EFilterAll', this.filterAll);
+      mobileEvents.addListener('EFilterActive', this.filterActive);
+      mobileEvents.addListener('EFilterBlocked', this.filterBlocked);
+  
     };
-    
-      componentWillUnmount = () => {
-        mobileEvents.removeListener('EDelete', this.delete);
-        mobileEvents.removeListener('EEdit', this.edit);
-        mobileEvents.removeListener('ECreate', this.create);
-        mobileEvents.removeListener('ESaveClient', this.save);
-        mobileEvents.removeListener('ECancel', this.cancel);
-    
-        mobileEvents.removeListener('EFilterAll', this.filterAll);
-        mobileEvents.removeListener('EFilterActive', this.filterActive);
-        mobileEvents.removeListener('EFilterBlocked', this.filterBlocked);
+  
+    componentWillUnmount = () => {
+      mobileEvents.removeListener('EDelete', this.delete);
+      mobileEvents.removeListener('EEdit', this.edit);
+      mobileEvents.removeListener('ECreate', this.create);
+      mobileEvents.removeListener('ESaveClient', this.save);
+      mobileEvents.removeListener('ECancel', this.cancel);
+  
+      mobileEvents.removeListener('EFilterAll', this.filterAll);
+      mobileEvents.removeListener('EFilterActive', this.filterActive);
+      mobileEvents.removeListener('EFilterBlocked', this.filterBlocked);
     };
+
 
     edit = (client) => {
         this.setState({
@@ -128,6 +129,8 @@ class MobileCompany extends React.PureComponent {
     filterAll = () => this.setState({ status: 0 })
     filterActive = () => this.setState({ status: 1 })
     filterBlocked = () => this.setState({ status: 2 })
+
+    
     
     render() {
 
