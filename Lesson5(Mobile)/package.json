@@ -1,13 +1,13 @@
 {
-  "name": "votesblock",
+  "name": "mobile",
   "version": "1.0.0",
-  "description": "блок голосования",
+  "description": "мобильная компания",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack",
-    "livebuild": "npx webpack-dev-server --progress --colors"
+    "build": ".\\node_modules\\.bin\\webpack",
+    "livebuild": ".\\node_modules\\.bin\\webpack-dev-server --progress --colors"
   },
-  "author": "",
+  "author": "ivan",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -21,9 +21,9 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
-    "events": "^3.3.0",
-    "prop-types": "^15.6.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "events": "^1.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   }
 }
