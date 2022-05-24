@@ -126,9 +126,9 @@ class MobileCompany extends React.PureComponent {
       }
     }
     
-    filterAll = () => this.setState({ status: 0 })
-    filterActive = () => this.setState({ status: 1 })
-    filterBlocked = () => this.setState({ status: 2 })
+    filterAll = () => this.setState({ status: 0 });
+    filterActive = () => this.setState({ status: 1 });
+    filterBlocked = () => this.setState({ status: 2 });
 
     
     
