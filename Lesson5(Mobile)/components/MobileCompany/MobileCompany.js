@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import mobileEvents from "../../events";
+import {mobileEvents} from "../../events";
 
 import MobileClient from '../MobileClient/MobileClient';
 import MobileForm from '../MobileForm/MobileForm';
