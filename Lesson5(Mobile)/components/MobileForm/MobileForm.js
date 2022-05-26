@@ -40,7 +40,7 @@ class MobileForm extends React.PureComponent {
                 im: this.imEl.current ? this.imEl.current.value : this.props.client.FIO.im,
                 otch: this.otchEl.current ? this.otchEl.current.value : this.props.client.FIO.otch,
             },
-            balance: +this.balanceEl.current ? +this.balanceEl.current.value : this.props.client.balance,
+            balance: this.balanceEl.current ? +this.balanceEl.current.value : this.props.client.balance,
         }
 
         mobileEvents.emit('ESaveClient', elem);
